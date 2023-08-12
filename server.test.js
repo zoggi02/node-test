@@ -9,6 +9,12 @@ it('Call the /youtube endpoint', async done => {
     expect(res.text).toBe('Hello, youtube indonesia!')
     done()
 })
+it('Call the /facebook endpoint', async done => {
+    const res = await request.get('/facebook')
+    expect(res.status).toBe(200)
+    expect(res.text).toBe('Hello, Foutube indonesia!')
+    done()
+})
 it('Call the / endpoint', async done => {
     const res = await request.get('/')
     expect(res.status).toBe(200)
